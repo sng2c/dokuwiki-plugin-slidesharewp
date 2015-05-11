@@ -1,0 +1,7 @@
+base   slidesharewp
+author Hanson  Kim
+email  sng2nara@gmail.com
+date   2015-05-08
+name   slidesharewp plugin
+desc   Link or embedded Slideshare Presentations with WordPress Pattern. Based on slideshare plugin(https://www.dokuwiki.org/plugin:slideshare).
+url    https://github.com/sng2c/dokuwiki-plugin-slideshare
