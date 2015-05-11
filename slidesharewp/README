@@ -1,9 +1,9 @@
 slidesharewp Plugin for DokuWiki
 
-Link or embedded Slideshare Presentations with WordPress Pattern. Based on slideshare plugin(https://www.dokuwiki.org/plugin:slideshare).
+Slideshare Presentations from WordPress Shortcode of SlideShare's share context menu.
 
 All documentation for this plugin can be found at
-https://github.com/sng2c/dokuwiki-plugin-slideshare
+https://github.com/sng2c/dokuwiki-plugin-slidesharewp
 
 If you install this plugin manually, make sure it is installed in
 lib/plugins/slidesharewp/ - if the folder is called different it

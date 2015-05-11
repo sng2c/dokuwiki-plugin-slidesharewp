@@ -52,12 +52,10 @@ class syntax_plugin_slidesharewp_slidesharewp extends DokuWiki_Syntax_Plugin {
      * @return array Data for the renderer
      */
     public function handle($match, $state, $pos, Doku_Handler &$handler){
-        $data = array();
-        $pm = preg_match_all('/\[slideshare id=(.+?)&doc=(.+)\]/', $match, $result);
+        $pm = preg_match_all('/\[slideshare id=(.+?)&doc=(.+?)\]/', $match, $result);
         $id = $result[1][0];
         $doc = $result[2][0];
-        return array($state, array($id, $doc));
-        return $data;
+        return array($id, $doc);
     }
 
     /**
@@ -70,12 +68,11 @@ class syntax_plugin_slidesharewp_slidesharewp extends DokuWiki_Syntax_Plugin {
      */
     public function render($mode, Doku_Renderer &$renderer, $data) {
         if($mode != 'xhtml') return false;
-        list($state, $match) = $data;
-        list($id, $doc) = $match;
+        list($id, $doc) = $data;
         $id = urlencode($id);
         $renderer->doc .= "<iframe src=\"http://www.slideshare.net/slideshow/embed_code/$id\" 
         width=\"425\" height=\"355\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" 
-        style=\"border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%%;\" allowfullscreen></iframe></div>";
+        style=\"border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%%;\" allowfullscreen></iframe>";
         $renderer->doc .= NL;
         return true;
     }
