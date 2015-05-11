@@ -35,7 +35,7 @@ class syntax_plugin_slidesharewp_slidesharewp extends DokuWiki_Syntax_Plugin {
      * @param string $mode Parser mode
      */
     public function connectTo($mode) {
-        $this->Lexer->addSpecialPattern('\[slideshare .+?\]',$mode,'plugin_slidesharewp_slidesharewp');
+        $this->Lexer->addSpecialPattern('\[slideshare id=.+?&doc=.+?\]',$mode,'plugin_slidesharewp_slidesharewp');
     }
 
 //    public function postConnect() {
