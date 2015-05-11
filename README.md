@@ -1,6 +1,6 @@
 # slidesharewp Plugin for DokuWiki
 
-Paste codes from `WordPress Shortcode` of SlideShare's share context menu. 
+Paste `WordPress Shortcode`from SlideShare's sharing options. 
 
 ```
 [slideshare id=47520737&doc=jdk-150428111305-conversion-gate02]
