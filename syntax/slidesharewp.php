@@ -51,7 +51,7 @@ class syntax_plugin_slidesharewp_slidesharewp extends DokuWiki_Syntax_Plugin {
      * @param Doku_Handler    $handler The handler
      * @return array Data for the renderer
      */
-    public function handle($match, $state, $pos, Doku_Handler &$handler){
+    public function handle($match, $state, $pos, Doku_Handler $handler){
         $pm = preg_match_all('/\[slideshare id=(.+?)&doc=(.+?)\]/', $match, $result);
         $id = $result[1][0];
         $doc = $result[2][0];
@@ -66,7 +66,7 @@ class syntax_plugin_slidesharewp_slidesharewp extends DokuWiki_Syntax_Plugin {
      * @param array          $data      The data from the handler() function
      * @return bool If rendering was successful.
      */
-    public function render($mode, Doku_Renderer &$renderer, $data) {
+    public function render($mode, Doku_Renderer $renderer, $data) {
         if($mode != 'xhtml') return false;
         list($id, $doc) = $data;
         $id = urlencode($id);
